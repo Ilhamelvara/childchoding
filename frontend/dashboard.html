@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dasbor – ChildCoding</title>
+  <meta name="description"
+    content="Dasbor pribadi ChildCoding. Pantau progress belajar, lanjutkan kursus, dan raih sertifikat impianmu." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+
+<body>
+
+  <!-- ── SIDEBAR ─────────────────────────────────────────── -->
+  <aside class="db-sidebar" id="dbSidebar">
+    <div class="sidebar-brand">
+      <i class="bi bi-lightning-charge-fill text-success"></i>
+      <span class="brand-name">ChildCoding</span>
+    </div>
+
+    <div class="sidebar-user">
+      <div class="user-avatar" id="sidebarAvatar">RA</div>
+      <div class="user-info">
+        <div class="user-name" id="sidebarUserName">Rizky Aditya</div>
+        <div class="user-role" id="accountRole">Pelajar</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav" id="sidebarNav">
+      <div class="nav-section-label">MENU UTAMA</div>
+      <a href="#" class="sidebar-link active" id="navDashboard" data-section="overview">
+        <i class="bi bi-grid-fill"></i><span>Dasbor</span>
+      </a>
+      <a href="#" class="sidebar-link" id="navMyCourses" data-section="my-courses">
+        <i class="bi bi-play-circle-fill"></i><span>Kursus Saya</span>
+        <span class="badge-count">3</span>
+      </a>
+      <a href="academy.html" class="sidebar-link" id="navPaths" data-section="paths">
+        <i class="bi bi-book-half"></i><span>Akademi</span>
+      </a>
+      <a href="#" class="sidebar-link" id="navCertificates" data-section="certs">
+        <i class="bi bi-patch-check-fill"></i><span>Sertifikat</span>
+        <span class="badge-count badge-new">1</span>
+      </a>
+
+      <div class="nav-section-label mt-3">AKUN</div>
+      <a href="profile.html" class="sidebar-link" id="navProfile">
+        <i class="bi bi-person-fill"></i><span>Profil</span>
+      </a>
+      <a href="#" class="sidebar-link" id="navSettings">
+        <i class="bi bi-gear-fill"></i><span>Pengaturan</span>
+      </a>
+      <a href="index.html" class="sidebar-link text-danger-link" id="navLogout" onclick="logout()">
+        <i class="bi bi-box-arrow-left"></i><span>Keluar Akun</span>
+      </a>
+    </nav>
+
+    <button class="sidebar-toggle-btn" id="sidebarToggle" title="Collapse sidebar">
+      <i class="bi bi-chevron-double-left"></i>
+    </button>
+  </aside>
+
+  <!-- ── MAIN WRAPPER ─────────────────────────────────────── -->
+  <div class="db-wrapper" id="dbWrapper">
+
+    <!-- TOP BAR -->
+    <header class="db-topbar" id="dbTopbar">
+      <button class="topbar-menu-btn" id="topbarMenuBtn">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="topbar-search" id="topbarSearch">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="Cari kursus, topik…" id="topbarSearchInput" />
+      </div>
+      <div class="topbar-actions">
+        <button class="topbar-icon-btn" id="btnDarkMode" title="Toggle dark mode">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+        <div class="topbar-notif-wrap">
+          <button class="topbar-icon-btn" id="btnNotif" title="Notifications">
+            <i class="bi bi-bell-fill"></i>
+            <span class="notif-dot"></span>
+          </button>
+        </div>
+        <div class="topbar-avatar" id="topbarAvatar">RA</div>
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="db-content" id="dbContent">
+
+      <!-- WELCOME BANNER -->
+      <section class="welcome-banner" id="welcomeBanner">
+        <div class="welcome-text">
+          <p class="welcome-greeting" id="welcomeGreeting">Selamat pagi, 👋</p>
+          <h1 class="welcome-title" id="welcomeTitle">Rizky Aditya</h1>
+          <p class="welcome-sub">Kamu sudah belajar <strong>12 jam</strong> minggu ini. Terus semangat!</p>
+        </div>
+        <div class="welcome-streak" id="welcomeStreak">
+          <i class="bi bi-fire"></i>
+          <div>
+            <div class="streak-num">7 Hari</div>
+            <div class="streak-label">Streak Belajar</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAT CARDS -->
+      <div class="db-stat-grid" id="statGrid">
+        <div class="db-stat-card" id="statCardCourses">
+          <div class="stat-icon-wrap stat-icon-blue">
+            <i class="bi bi-play-circle-fill"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-val" data-target="3" id="userCourses">0</div>
+            <div class="stat-lbl">Kursus Aktif</div>
+          </div>
+          <div class="stat-trend stat-trend-up"><i class="bi bi-arrow-up-short"></i>+1 minggu ini</div>
+        </div>
+        <div class="db-stat-card" id="statCardHours">
+          <div class="stat-icon-wrap stat-icon-green">
+            <i class="bi bi-clock-fill"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-val" data-target="48" id="userHours">0</div>
+            <div class="stat-lbl">Jam Belajar</div>
+          </div>
+          <div class="stat-trend stat-trend-up"><i class="bi bi-arrow-up-short"></i>+12 minggu ini</div>
+        </div>
+        <div class="db-stat-card" id="statCardCerts">
+          <div class="stat-icon-wrap stat-icon-amber">
+            <i class="bi bi-patch-check-fill"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-val" data-target="2">0</div>
+            <div class="stat-lbl">Sertifikat</div>
+          </div>
+          <div class="stat-trend stat-trend-up"><i class="bi bi-arrow-up-short"></i>+1 baru</div>
+        </div>
+        <div class="db-stat-card" id="statCardPoints">
+          <div class="stat-icon-wrap stat-icon-purple">
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <div class="stat-content">
+            <div class="stat-val" data-target="1340" id="userXP">0</div>
+            <div class="stat-lbl">XP Points</div>
+          </div>
+          <div class="stat-trend stat-trend-up"><i class="bi bi-arrow-up-short"></i>+250 pts</div>
+        </div>
+      </div>
+
+      <!-- MAIN GRID: courses + activity -->
+      <div class="db-main-grid">
+
+        <!-- CONTINUE LEARNING -->
+        <section class="db-card db-continue" id="sectionContinue">
+          <div class="db-card-header">
+            <h2 class="db-card-title">Lanjutkan Belajar</h2>
+            <a href="#" class="db-card-link" id="linkAllCourses">Lihat Semua <i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <!-- Course Item 1 -->
+          <div class="course-item" id="courseItem1">
+            <div class="course-thumb course-thumb-blue">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <div class="course-info">
+              <div class="course-title" id="courseTitle1">Modern Front-End Developer</div>
+              <div class="course-meta">
+                <span><i class="bi bi-collection-play"></i> Modul 6 dari 8</span>
+                <span><i class="bi bi-clock"></i> 2j 30m tersisa</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="course-progress-bar">
+                  <div class="course-progress-fill" style="width:60%" id="courseProgress1"></div>
+                </div>
+                <span class="course-pct">60%</span>
+              </div>
+            </div>
+            <button class="btn-continue" id="btnContinue1">
+              <i class="bi bi-play-fill"></i>
+            </button>
+          </div>
+
+          <!-- Course Item 2 -->
+          <div class="course-item" id="courseItem2">
+            <div class="course-thumb course-thumb-green">
+              <i class="bi bi-robot"></i>
+            </div>
+            <div class="course-info">
+              <div class="course-title" id="courseTitle2">AI & Machine Learning Engineer</div>
+              <div class="course-meta">
+                <span><i class="bi bi-collection-play"></i> Modul 4 dari 12</span>
+                <span><i class="bi bi-clock"></i> 8j 15m tersisa</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="course-progress-bar">
+                  <div class="course-progress-fill" style="width:35%" id="courseProgress2"></div>
+                </div>
+                <span class="course-pct">35%</span>
+              </div>
+            </div>
+            <button class="btn-continue" id="btnContinue2">
+              <i class="bi bi-play-fill"></i>
+            </button>
+          </div>
+
+          <!-- Course Item 3 -->
+          <div class="course-item" id="courseItem3">
+            <div class="course-thumb course-thumb-amber">
+              <i class="bi bi-bar-chart-fill"></i>
+            </div>
+            <div class="course-info">
+              <div class="course-title" id="courseTitle3">Data Scientist in Practice</div>
+              <div class="course-meta">
+                <span><i class="bi bi-collection-play"></i> Modul 5 dari 10</span>
+                <span><i class="bi bi-clock"></i> 5j 00m tersisa</span>
+              </div>
+              <div class="course-progress-wrap">
+                <div class="course-progress-bar">
+                  <div class="course-progress-fill" style="width:50%" id="courseProgress3"></div>
+                </div>
+                <span class="course-pct">50%</span>
+              </div>
+            </div>
+            <button class="btn-continue" id="btnContinue3">
+              <i class="bi bi-play-fill"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- RIGHT COLUMN -->
+        <div class="db-right-col">
+
+          <!-- WEEKLY GOAL -->
+          <section class="db-card db-weekly-goal" id="sectionWeeklyGoal">
+            <div class="db-card-header">
+              <h2 class="db-card-title">Target Mingguan</h2>
+              <span class="goal-badge" id="goalBadge">12 / 15 jam</span>
+            </div>
+            <div class="goal-ring-wrap">
+              <svg class="goal-ring" viewBox="0 0 120 120" id="goalRing">
+                <circle cx="60" cy="60" r="50" class="goal-ring-bg" />
+                <circle cx="60" cy="60" r="50" class="goal-ring-fill" id="goalRingFill" stroke-dasharray="314"
+                  stroke-dashoffset="63" />
+              </svg>
+              <div class="goal-ring-center">
+                <span class="goal-pct" id="goalPct">80%</span>
+                <span class="goal-lbl">Selesai</span>
+              </div>
+            </div>
+            <div class="goal-days" id="goalDays">
+              <div class="day-dot day-done" title="Senin"><span>S</span></div>
+              <div class="day-dot day-done" title="Selasa"><span>S</span></div>
+              <div class="day-dot day-done" title="Rabu"><span>R</span></div>
+              <div class="day-dot day-done" title="Kamis"><span>K</span></div>
+              <div class="day-dot day-today" title="Jumat"><span>J</span></div>
+              <div class="day-dot" title="Sabtu"><span>S</span></div>
+              <div class="day-dot" title="Minggu"><span>M</span></div>
+            </div>
+          </section>
+
+          <!-- RECENT ACTIVITY -->
+          <section class="db-card db-activity" id="sectionActivity">
+            <div class="db-card-header">
+              <h2 class="db-card-title">Aktivitas Terbaru</h2>
+            </div>
+            <ul class="activity-list" id="activityList">
+              <li class="activity-item" id="activity1">
+                <div class="act-icon act-icon-green"><i class="bi bi-check-lg"></i></div>
+                <div class="act-info">
+                  <div class="act-title">Selesaikan Quiz: CSS Grid</div>
+                  <div class="act-time">2 jam lalu</div>
+                </div>
+                <div class="act-xp">+50 XP</div>
+              </li>
+              <li class="activity-item" id="activity2">
+                <div class="act-icon act-icon-blue"><i class="bi bi-play-fill"></i></div>
+                <div class="act-info">
+                  <div class="act-title">Mulai Module: React Hooks</div>
+                  <div class="act-time">5 jam lalu</div>
+                </div>
+                <div class="act-xp">+20 XP</div>
+              </li>
+              <li class="activity-item" id="activity3">
+                <div class="act-icon act-icon-amber"><i class="bi bi-patch-check-fill"></i></div>
+                <div class="act-info">
+                  <div class="act-title">Sertifikat: HTML & CSS</div>
+                  <div class="act-time">Kemarin</div>
+                </div>
+                <div class="act-xp">+200 XP</div>
+              </li>
+              <li class="activity-item" id="activity4">
+                <div class="act-icon act-icon-purple"><i class="bi bi-star-fill"></i></div>
+                <div class="act-info">
+                  <div class="act-title">Raih badge: 7 Hari Streak</div>
+                  <div class="act-time">Kemarin</div>
+                </div>
+                <div class="act-xp">+100 XP</div>
+              </li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- RECOMMENDED COURSES -->
+      <section class="db-card db-recommended" id="sectionRecommended">
+        <div class="db-card-header">
+          <h2 class="db-card-title">Rekomendasi Untukmu</h2>
+          <a href="academy.html" class="db-card-link" id="linkRecommended">Jelajahi Semua <i
+              class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="rec-grid" id="recGrid">
+          <div class="rec-card" id="recCard1">
+            <div class="rec-card-img rec-img-teal">
+              <i class="bi bi-braces"></i>
+            </div>
+            <div class="rec-card-body">
+              <span class="rec-tag">TypeScript</span>
+              <div class="rec-title">TypeScript Mastery: From Zero to Hero</div>
+              <div class="rec-meta">
+                <span><i class="bi bi-people-fill"></i> 8.4K siswa</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.9</span>
+              </div>
+            </div>
+            <a href="#" class="rec-enroll" id="btnEnroll1">Daftar Gratis</a>
+          </div>
+
+          <div class="rec-card" id="recCard2">
+            <div class="rec-card-img rec-img-indigo">
+              <i class="bi bi-diagram-3-fill"></i>
+            </div>
+            <div class="rec-card-body">
+              <span class="rec-tag">Sistem Desain</span>
+              <div class="rec-title">System Design for Engineers</div>
+              <div class="rec-meta">
+                <span><i class="bi bi-people-fill"></i> 12.1K siswa</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.8</span>
+              </div>
+            </div>
+            <a href="#" class="rec-enroll" id="btnEnroll2">Daftar Gratis</a>
+          </div>
+
+          <div class="rec-card" id="recCard3">
+            <div class="rec-card-img rec-img-rose">
+              <i class="bi bi-phone-fill"></i>
+            </div>
+            <div class="rec-card-body">
+              <span class="rec-tag">Aplikasi Mobile</span>
+              <div class="rec-title">React Native: Build Mobile Apps</div>
+              <div class="rec-meta">
+                <span><i class="bi bi-people-fill"></i> 5.7K siswa</span>
+                <span><i class="bi bi-star-fill text-warning"></i> 4.7</span>
+              </div>
+            </div>
+            <a href="#" class="rec-enroll" id="btnEnroll3">Daftar Gratis</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+
+</html>

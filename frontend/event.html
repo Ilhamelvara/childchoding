@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Webinars – ChildCoding</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/event.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html" id="navBrand">
+        <span class="brand-icon me-1"><i class="bi bi-lightning-charge-fill text-success"></i></span>
+        ChildCoding
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link fw-medium" href="index.html" id="navHome">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="dashboard.html" id="navDashboard">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="academy.html" id="navAcademy">Academy</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium" href="learning.html" id="navLearning">Learning</a></li>
+          <li class="nav-item"><a class="nav-link fw-medium active" href="event.html" id="navEvent">Event</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3">
+          <a href="profile.html" class="text-decoration-none d-flex align-items-center gap-2">
+            <div
+              class="account-avatar rounded-circle bg-success text-white d-flex align-items-center justify-content-center fw-bold"
+              style="width:36px; height:36px; font-size:14px;" id="navAvatar">RA</div>
+            <div class="d-none d-lg-block" id="accountInfo">
+              <div class="small fw-semibold text-dark" id="accountName">Rizky Aditya</div>
+              <div class="small text-muted" id="accountRole" style="font-size:12px;">Frontend Learner</div>
+            </div>
+          </a>
+          <div class="d-flex align-items-center gap-2 px-3 py-1 rounded-3"
+            style="background-color:#fff3cd; border:1px solid #ffeeba;">
+            <i class="bi bi-fire text-warning" style="font-size:18px;"></i>
+            <div class="d-none d-sm-block" id="streakInfo">
+              <div class="small fw-bold" style="color:#856404;">7 Days</div>
+              <div class="small" style="color:#856404; font-size:11px;">Streak</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- EVENT HERO -->
+  <section class="event-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <span class="badge bg-success mb-3">Live Events</span>
+          <h1 class="fw-extrabold mb-3">Tingkatkan Skill Lewat Diskusi Langsung</h1>
+          <p class="opacity-75 mb-4">Ikuti berbagai webinar dan workshop menarik bersama para ahli teknologi setiap
+            minggunya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS LIST -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold mb-0">Upcoming Events</h3>
+        <div class="btn-group">
+          <button class="btn btn-outline-secondary btn-sm active">Semua</button>
+          <button class="btn btn-outline-secondary btn-sm">Webinar</button>
+          <button class="btn btn-outline-secondary btn-sm">Workshop</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Event 1 -->
+        <div class="col-md-4">
+          <div class="event-card shadow-sm position-relative">
+            <div class="event-date-badge">
+              <div class="event-date-day">15</div>
+              <div class="event-date-month">Mei</div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&auto=format&fit=crop&q=80"
+              alt="Event" class="event-img">
+            <div class="p-4">
+              <span class="text-success small fw-bold text-uppercase">Webinar</span>
+              <h5 class="fw-bold my-2">Karier di Bidang Tech 2024</h5>
+              <p class="text-muted small mb-3"><i class="bi bi-clock me-1"></i> 19:00 - 20:30 WIB</p>
+              <a href="#" class="btn btn-success w-100 fw-bold">Daftar Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="col-md-4">
+          <div class="event-card shadow-sm position-relative">
+            <div class="event-date-badge">
+              <div class="event-date-day">22</div>
+              <div class="event-date-month">Mei</div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1591115765373-520b7a0648c6?w=600&auto=format&fit=crop&q=80"
+              alt="Event" class="event-img">
+            <div class="p-4">
+              <span class="text-primary small fw-bold text-uppercase">Workshop</span>
+              <h5 class="fw-bold my-2">Building Portfolio with React</h5>
+              <p class="text-muted small mb-3"><i class="bi bi-clock me-1"></i> 13:00 - 16:00 WIB</p>
+              <a href="#" class="btn btn-success w-100 fw-bold">Daftar Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="col-md-4">
+          <div class="event-card shadow-sm position-relative">
+            <div class="event-date-badge">
+              <div class="event-date-day">05</div>
+              <div class="event-date-month">Jun</div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&auto=format&fit=crop&q=80"
+              alt="Event" class="event-img">
+            <div class="p-4">
+              <span class="text-success small fw-bold text-uppercase">Webinar</span>
+              <h5 class="fw-bold my-2">Future of AI in Software Dev</h5>
+              <p class="text-muted small mb-3"><i class="bi bi-clock me-1"></i> 19:00 - 20:30 WIB</p>
+              <a href="#" class="btn btn-success w-100 fw-bold">Daftar Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section py-5 mt-5 bg-white border-top">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-4">
+          <div class="fw-bold fs-5 mb-2">
+            <i class="bi bi-lightning-charge-fill text-success me-1"></i> ChildCoding
+          </div>
+          <p class="text-muted small mb-0">© 2026 ChildCoding Academy. Advancing careers through modern innovation.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+
+</html>

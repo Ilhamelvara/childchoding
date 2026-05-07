@@ -1,0 +1,43 @@
+.event-hero {
+  background: #0f172a;
+  color: #fff;
+  padding: 60px 0;
+}
+.event-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.event-card .p-4 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.event-card .btn {
+  margin-top: auto;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+}
+.event-img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+.event-date-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #fff;
+  padding: 5px 12px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+.event-date-day { font-size: 1.1rem; font-weight: 800; line-height: 1; }
+.event-date-month { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--green-primary); }
