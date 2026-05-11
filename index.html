@@ -3,14 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Mengarahkan (redirect) otomatis ke dashboard.html dalam 0 detik -->
-    <meta http-equiv="refresh" content="0; url=dashboard.html">
-    <title>ChildCoding - Mengarahkan...</title>
+    <title>Dashboard - ChildCoding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-    <div style="font-family: Arial, sans-serif; text-align: center; margin-top: 50px;">
-        <p>Mengarahkan ke halaman utama...</p>
-        <p>Jika tidak diarahkan otomatis, silakan <a href="dashboard.html">klik di sini</a>.</p>
-    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">ChildCoding</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="learning-path.html">Learning Path</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="subscription.html">Langganan</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Header Banner -->
+    <header class="banner">
+        <div class="banner-content">
+            <h2 id="welcomeName">Selamat datang, <br>Di Website Pembelajaran ChildCoding!</h2>
+            <p class="banner-desc">ChildCoding adalah website pembelajaran coding yang dirancang khusus untuk pemula yang ingin belajar pemrograman dari dasar dengan cara yang mudah dipahami dan menyenangkan. Website ini menyediakan materi seperti HTML, CSS, JavaScript, serta dasar logika pemrograman yang disusun secara bertahap agar pengguna dapat belajar dengan lebih terarah. Selain itu, ChildCoding juga menyediakan contoh kode dan latihan praktik yang membantu pengguna memahami materi dengan lebih mudah. Dengan tampilan yang sederhana dan ramah untuk pemula, ChildCoding menjadi tempat belajar coding yang cocok bagi pelajar maupun siapa saja yang ingin mulai mengenal dunia teknologi dan pemrograman.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="learning-paths-header">
+            <div class="header-text">
+                <h2>Structured Learning Paths</h2>
+                <p>Follow a curated curriculum designed to take you from foundational concepts to advanced, job-ready skills.</p>
+            </div>
+            <a href="learning-path.html" class="view-all">View all paths &rarr;</a>
+        </div>
+
+        <!-- Paths Grid Layout -->
+        <div class="paths-grid">
+            <!-- Card 1 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/ai_ml_course.png" alt="AI & Machine Learning">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 16v-4"></path>
+                            <path d="M12 8h.01"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-advanced">Advanced</span>
+                    <h3>AI & Machine Learning Engineer</h3>
+                    <p>Master deep learning, neural networks, and NLP. Build real-world AI applications using Python and TensorFlow.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        6 Months
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        12 Courses
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/frontend_course.png" alt="Modern Front-End Developer">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-beginner">Beginner to Pro</span>
+                    <h3>Modern Front-End Developer</h3>
+                    <p>Create responsive, accessible, and highly interactive user interfaces using React, Tailwind CSS, and TypeScript.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 10%;"></div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        4 Months
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        8 Courses
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/data_science_course.png" alt="Data Scientist in Practice">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-intermediate">Intermediate</span>
+                    <h3>Data Scientist in Practice</h3>
+                    <p>Turn complex data into actionable insights. Learn SQL, Python data visualization, and statistical modeling.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%;"></div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        5 Months
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        10 Courses
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ChildCoding. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

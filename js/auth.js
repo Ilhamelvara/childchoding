@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('currentUser', JSON.stringify(users[username]));
                 alert(`Selamat datang kembali, ${users[username].name}!`);
                 
-                // Arahkan ke halaman utama (misal dashboard.html)
-                window.location.href = 'dashboard.html';
+                // Arahkan ke halaman utama (misal index.html)
+                window.location.href = 'index.html';
             } else {
                 alert('Username tidak ditemukan. Silakan daftar terlebih dahulu.');
             }
