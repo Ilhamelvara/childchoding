@@ -121,6 +121,26 @@ body {
     color: white;
 }
 
+.login-btn-nav {
+    padding: 8px 20px;
+    background-color: #065f46;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s;
+    border: 1px solid #065f46;
+    display: inline-block;
+}
+
+.login-btn-nav:hover {
+    background-color: #047857;
+    border-color: #047857;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(6, 95, 70, 0.2);
+}
+
 /* Banner */
 .banner {
     background-color: #111827; /* Fallback gelap */
