@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Path - ChildCoding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/learning-path.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">ChildCoding</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="learning-path.html" class="active">Learning Path</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="subscription.html">Langganan</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Jalur Pembelajaran</h1>
+        <p>Pilih jalur pembelajaran yang sesuai dengan minat dan tujuan karirmu</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="filters">
+            <button class="filter-btn active">Semua</button>
+            <button class="filter-btn">Pemula</button>
+            <button class="filter-btn">Menengah</button>
+            <button class="filter-btn">Lanjutan</button>
+        </div>
+
+        <div class="paths-grid">
+            <!-- Card 1 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/frontend_course.png" alt="Front-End Developer" onerror="this.src='https://placehold.co/600x400/065f46/white?text=Front-End'">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-beginner">Pemula</span>
+                    <h3>Front-End Web Developer</h3>
+                    <p>Mulai karirmu sebagai developer web. Pelajari HTML, CSS, JavaScript, dan bangun antarmuka yang responsif.</p>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        3 Bulan
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        6 Kursus
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/backend_course.png" alt="Back-End Developer" onerror="this.src='https://placehold.co/600x400/065f46/white?text=Back-End'">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-intermediate">Menengah</span>
+                    <h3>Back-End Web Developer</h3>
+                    <p>Pelajari cara membuat server, API, dan mengelola database dengan Node.js, Express, dan PostgreSQL.</p>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        4 Bulan
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        8 Kursus
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/data_science_course.png" alt="Data Scientist" onerror="this.src='https://placehold.co/600x400/065f46/white?text=Data+Science'">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-advanced">Lanjutan</span>
+                    <h3>Data Scientist</h3>
+                    <p>Ubah data menjadi informasi berharga. Pelajari Python, Machine Learning, dan visualisasi data.</p>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        5 Bulan
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        10 Kursus
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/mobile_course.png" alt="Mobile Developer" onerror="this.src='https://placehold.co/600x400/065f46/white?text=Mobile+Dev'">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-intermediate">Menengah</span>
+                    <h3>Mobile App Developer</h3>
+                    <p>Buat aplikasi Android dan iOS native maupun cross-platform menggunakan Flutter atau React Native.</p>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        4 Bulan
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        7 Kursus
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/uiux_course.png" alt="UI/UX Designer" onerror="this.src='https://placehold.co/600x400/065f46/white?text=UI/UX+Design'">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-beginner">Pemula</span>
+                    <h3>UI/UX Designer</h3>
+                    <p>Pelajari prinsip desain antarmuka dan pengalaman pengguna menggunakan tools seperti Figma.</p>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        2 Bulan
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        5 Kursus
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Card 6 -->
+            <div class="path-card">
+                <div class="card-image">
+                    <img src="assets/cyber_course.png" alt="Cyber Security" onerror="this.src='https://placehold.co/600x400/065f46/white?text=Cyber+Security'">
+                    <div class="icon-circle">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <span class="badge badge-advanced">Lanjutan</span>
+                    <h3>Cyber Security Expert</h3>
+                    <p>Pahami cara mengamankan sistem dan jaringan dari serangan siber melalui praktik Ethical Hacking.</p>
+                </div>
+                <div class="card-footer">
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        6 Bulan
+                    </span>
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        12 Kursus
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ChildCoding. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

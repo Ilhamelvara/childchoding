@@ -1,0 +1,41 @@
+/* Learning Path Page Styles */
+.page-header {
+    background-color: #065f46;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.page-header p {
+    color: #d1fae5;
+    font-size: 16px;
+}
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    padding: 8px 20px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #4b5563;
+    transition: all 0.3s;
+}
+.filter-btn:hover {
+    border-color: #065f46;
+    color: #065f46;
+}
+.filter-btn.active {
+    background: #065f46;
+    color: white;
+    border-color: #065f46;
+}

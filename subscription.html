@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langganan - ChildCoding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/subscription.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <h1 class="logo">ChildCoding</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Home</a></li>
+            <li><a href="learning-path.html">Learning Path</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="subscription.html" class="active">Langganan</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="subscription-header">
+        <h1>Tingkatkan Karir Coding-mu</h1>
+        <p>Pilih paket belajar yang sesuai dengan tujuanmu. Dapatkan akses tak terbatas ke materi, proyek portofolio, dan bimbingan mentor.</p>
+    </header>
+
+    <!-- Pricing Grid -->
+    <main>
+        <div class="pricing-grid">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <h2 class="plan-name">Basic</h2>
+                <div class="plan-price">Gratis</div>
+                <p class="plan-desc">Cocok untuk kamu yang baru ingin mencoba belajar coding dari nol.</p>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Akses materi dasar (HTML, CSS)
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Latihan kuis harian
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Akses forum komunitas
+                    </li>
+                    <li class="disabled">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        Sertifikat kelulusan
+                    </li>
+                    <li class="disabled">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        Akses ke project portofolio
+                    </li>
+                </ul>
+                <a href="#" class="subscribe-btn subscribe-btn-outline">Daftar Gratis</a>
+            </div>
+
+            <!-- Pro Plan -->
+            <div class="pricing-card popular">
+                <div class="popular-badge">Paling Populer</div>
+                <h2 class="plan-name">Pro</h2>
+                <div class="plan-price">Rp99k<span>/bulan</span></div>
+                <p class="plan-desc">Paket komplit untuk mempercepat proses belajarmu menjadi developer profesional.</p>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Akses SEMUA materi & video
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Sertifikat resmi ChildCoding
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Panduan project portofolio
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Diskon event & hackathon
+                    </li>
+                    <li class="disabled">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        Sesi mentoring 1-on-1
+                    </li>
+                </ul>
+                <a href="#" class="subscribe-btn subscribe-btn-primary">Mulai Pro</a>
+            </div>
+
+            <!-- Lifetime Plan -->
+            <div class="pricing-card">
+                <h2 class="plan-name">Lifetime</h2>
+                <div class="plan-price">Rp1,2jt<span>/sekali</span></div>
+                <p class="plan-desc">Investasi sekali untuk akses belajar seumur hidup beserta dukungan penuh mentor.</p>
+                <ul class="feature-list">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Akses seumur hidup
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Update materi gratis selamanya
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Sesi mentoring bulanan
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Review kode prioritas
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                        Akses ke grup Telegram VIP
+                    </li>
+                </ul>
+                <a href="#" class="subscribe-btn subscribe-btn-outline">Beli Lifetime</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ChildCoding. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
