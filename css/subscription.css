@@ -33,33 +33,7 @@
     border-color: rgba(6, 95, 70, 0.25);
 }
 
-.pricing-card.popular {
-    border: 2.5px solid var(--primary);
-    transform: scale(1.03);
-    z-index: 10;
-    box-shadow: var(--shadow-premium);
-}
 
-.pricing-card.popular:hover {
-    transform: scale(1.03) translateY(-8px);
-    box-shadow: 0 20px 30px rgba(6, 95, 70, 0.15);
-}
-
-.popular-badge {
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
-    color: white;
-    padding: 6px 18px;
-    border-radius: var(--radius-full);
-    font-size: 11px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 10px rgba(6, 95, 70, 0.2);
-}
 
 .plan-name {
     font-size: 22px;
@@ -152,26 +126,11 @@
     color: var(--primary);
 }
 
-.subscribe-btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
-    color: white;
-    box-shadow: 0 4px 12px rgba(6, 95, 70, 0.15);
-}
 
-.subscribe-btn-primary:hover {
-    filter: brightness(1.05);
-    box-shadow: 0 6px 16px rgba(6, 95, 70, 0.25);
-}
 
 @media (max-width: 768px) {
     .pricing-grid {
         margin-top: 40px;
         padding-bottom: 40px;
-    }
-    .pricing-card.popular {
-        transform: none;
-    }
-    .pricing-card.popular:hover {
-        transform: translateY(-8px);
     }
 }
