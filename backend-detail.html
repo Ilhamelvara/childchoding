@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back-End Web Developer - ChildCoding</title>
+    <meta name="description" content="Pelajari Node.js, Express, dan PostgreSQL untuk membangun server, API, dan mengelola database bersama ChildCoding.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/course-detail.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left"><h1 class="logo">ChildCoding</h1></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learning-path.html" class="active">Learning Path</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="subscription.html">Langganan</a></li>
+        </ul>
+        <div class="nav-right"><button id="logoutBtn" class="logout-btn">Logout</button></div>
+    </nav>
+
+    <section class="course-hero hero-backend">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <a href="learning-path.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                Kembali ke Learning Path
+            </a>
+            <div class="hero-badge badge-intermediate">Menengah</div>
+            <h1>Back-End Web Developer</h1>
+            <p>Pelajari cara membangun server, REST API, dan mengelola database secara profesional dengan Node.js, Express, dan PostgreSQL.</p>
+            <div class="hero-stats">
+                <div class="stat-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span>4 Bulan</span></div>
+                <div class="stat-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg><span>8 Kursus</span></div>
+                <div class="stat-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>980+ Siswa</span></div>
+                <div class="stat-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><span>4.7 / 5.0</span></div>
+            </div>
+            <a href="subscription.html" class="btn-enroll">Mulai Belajar Sekarang</a>
+        </div>
+        <div class="hero-image"><img src="assets/backend_course.png" alt="Back-End Web Developer"></div>
+    </section>
+
+    <main class="course-layout">
+        <div class="course-main">
+            <section class="content-card">
+                <h2>Apa yang Akan Kamu Pelajari</h2>
+                <div class="learn-grid">
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Membangun server HTTP dengan Node.js dan Express</div>
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Merancang dan mengelola database dengan PostgreSQL</div>
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Membuat REST API yang aman dan terstruktur</div>
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Autentikasi & Otorisasi dengan JWT dan OAuth</div>
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> ORM dengan Prisma / Sequelize</div>
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Upload file, validasi data, dan error handling</div>
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Deployment server ke Railway / Render / VPS</div>
+                    <div class="learn-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Testing API dengan Postman & unit testing</div>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <h2>Kurikulum</h2>
+                <p class="curriculum-subtitle">8 Modul &bull; 64 Video &bull; 16 Proyek Latihan</p>
+                <div class="curriculum-list">
+                    <div class="curriculum-item">
+                        <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                            <div class="curriculum-title"><span class="module-num">01</span><div><h3>Dasar Node.js</h3><span>8 Video &bull; 1 Minggu</span></div></div>
+                            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="curriculum-body"><ul>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Pengenalan Node.js & Runtime</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Modul, NPM, dan package.json</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> File system & Streams</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Event loop & Asynchronous</li>
+                        </ul></div>
+                    </div>
+                    <div class="curriculum-item">
+                        <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                            <div class="curriculum-title"><span class="module-num">02</span><div><h3>Express.js & REST API</h3><span>10 Video &bull; 2 Minggu</span></div></div>
+                            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="curriculum-body"><ul>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Routing & Middleware</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Request, Response, dan HTTP Methods</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> CRUD API lengkap</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Validasi data & Error Handling</li>
+                        </ul></div>
+                    </div>
+                    <div class="curriculum-item">
+                        <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                            <div class="curriculum-title"><span class="module-num">03</span><div><h3>Database PostgreSQL</h3><span>12 Video &bull; 2 Minggu</span></div></div>
+                            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="curriculum-body"><ul>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> SQL dasar: SELECT, INSERT, UPDATE, DELETE</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Relasi tabel & JOIN</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> ORM dengan Prisma</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Migrations & Seeding</li>
+                        </ul></div>
+                    </div>
+                    <div class="curriculum-item">
+                        <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                            <div class="curriculum-title"><span class="module-num">04</span><div><h3>Autentikasi & Keamanan</h3><span>8 Video &bull; 2 Minggu</span></div></div>
+                            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="curriculum-body"><ul>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> JWT Authentication</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Bcrypt & Hashing Password</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Role-based Access Control</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> CORS & keamanan API</li>
+                        </ul></div>
+                    </div>
+                    <div class="curriculum-item">
+                        <div class="curriculum-header" onclick="toggleCurriculum(this)">
+                            <div class="curriculum-title"><span class="module-num">05</span><div><h3>Deployment & DevOps Dasar</h3><span>6 Video &bull; 1 Minggu</span></div></div>
+                            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="curriculum-body"><ul>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Deploy ke Railway & Render</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Pengenalan Docker</li>
+                            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg> Environment Variables & Config</li>
+                        </ul></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-card">
+                <h2>Prasyarat</h2>
+                <ul class="req-list">
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Memiliki pemahaman dasar JavaScript (variabel, fungsi, async)</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Sudah menyelesaikan kursus Front-End atau setara</li>
+                    <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg> Laptop / PC dengan RAM minimal 4GB</li>
+                </ul>
+            </section>
+        </div>
+
+
+    </main>
+
+    <footer class="footer"><div class="footer-content"><p>&copy; 2026 ChildCoding. All rights reserved.</p></div></footer>
+    <script src="js/auth.js"></script>
+    <script src="js/course.js"></script>
+</body>
+</html>
