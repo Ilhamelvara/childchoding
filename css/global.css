@@ -525,7 +525,8 @@ body {
     font-weight: 600;
 }
 
-.card-footer span svg {
+.card-footer span svg,
+.card-footer span i {
     color: var(--text-muted);
 }
 

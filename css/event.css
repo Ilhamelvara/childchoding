@@ -126,7 +126,8 @@
     font-weight: 500;
 }
 
-.event-detail svg {
+.event-detail svg,
+.event-detail i {
     color: var(--text-muted);
 }
 

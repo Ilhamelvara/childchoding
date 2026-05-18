@@ -117,7 +117,8 @@
     font-weight: 600;
 }
 
-.stat-item svg { opacity: 0.8; }
+.stat-item svg,
+.stat-item i { opacity: 0.8; }
 
 .btn-enroll {
     display: inline-block;
@@ -181,7 +182,8 @@
     line-height: 1.5;
 }
 
-.learn-item svg {
+.learn-item svg,
+.learn-item i {
     flex-shrink: 0;
     margin-top: 2px;
     color: var(--primary);
@@ -294,7 +296,8 @@
     color: var(--text-light);
 }
 
-.curriculum-body li svg { color: var(--primary); flex-shrink: 0; }
+.curriculum-body li svg,
+.curriculum-body li i { color: var(--primary); flex-shrink: 0; }
 
 /* ---- Requirements ---- */
 .req-list {
@@ -313,7 +316,8 @@
     line-height: 1.6;
 }
 
-.req-list li svg {
+.req-list li svg,
+.req-list li i {
     flex-shrink: 0;
     margin-top: 2px;
     color: var(--accent-blue);
