@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ==========================================
-   DESIGN SYSTEM & CSS VARIABLES
-   ========================================== */
 :root {
     /* Color Palette */
     --primary: #065f46;          /* Emerald-800 */
@@ -43,9 +40,6 @@
     --transition-fast: all 0.15s ease-in-out;
 }
 
-/* ==========================================
-   UNIVERSAL RESET & BASE STYLES
-   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -61,9 +55,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ==========================================
-   NAVBAR (GLOBAL)
-   ========================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -181,9 +172,6 @@ body {
     display: none;
 }
 
-/* ==========================================
-   BUTTONS & ACTIONS
-   ========================================== */
 .btn-primary, 
 .subscribe-btn-primary {
     padding: 10px 20px;
@@ -277,9 +265,6 @@ body {
     filter: brightness(1.05);
 }
 
-/* ==========================================
-   PAGE HEADERS (UNIFIED & PREMIUM)
-   ========================================== */
 /* Main landing page banner */
 .banner {
     background-color: var(--primary-dark);
@@ -371,9 +356,6 @@ body {
     opacity: 0.9;
 }
 
-/* ==========================================
-   LAYOUTS & CONTAINER
-   ========================================== */
 .container {
     max-width: 1240px;
     margin: 40px auto;
@@ -381,9 +363,6 @@ body {
 }
 
 
-/* ==========================================
-   SHARED CARD COMPONENTS (LEARNING PATHS)
-   ========================================== */
 .learning-paths-header {
     display: flex;
     justify-content: space-between;
@@ -550,9 +529,6 @@ body {
     color: var(--text-muted);
 }
 
-/* ==========================================
-   HOMEPAGE EXTRA SECTIONS (PREMIUM)
-   ========================================== */
 .section-title {
     text-align: center;
     margin-top: 80px;
@@ -703,9 +679,6 @@ body {
     }
 }
 
-/* ==========================================
-   FOOTER (GLOBAL)
-   ========================================== */
 .footer {
     background-color: var(--bg-card);
     border-top: 1px solid var(--border-color);
@@ -720,9 +693,6 @@ body {
     font-weight: 500;
 }
 
-/* ==========================================
-   RESPONSIVE DESIGN / MEDIA QUERIES
-   ========================================== */
 @media (max-width: 1024px) {
     .paths-grid {
         grid-template-columns: repeat(2, 1fr);
