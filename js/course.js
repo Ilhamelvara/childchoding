@@ -1,7 +1,7 @@
-/* ==========================================
-   COURSE DETAIL PAGE - Lesson Modal & Curriculum
-   Digunakan oleh: frontend-detail.html dan halaman kursus lainnya
-   ========================================== */
+// ==========================================
+// COURSE DETAIL PAGE - Lesson Modal & Curriculum
+// Digunakan oleh: frontend-detail.html dan halaman kursus lainnya
+// ==========================================
 
 const lessons = {
     'html-intro': {
@@ -171,7 +171,7 @@ const lessons = {
     }
 };
 
-/* ---------- Lesson Modal ---------- */
+// ---------- Lesson Modal ----------
 function openLesson(e, key) {
     e.preventDefault();
     const lesson = lessons[key];
@@ -183,7 +183,6 @@ function openLesson(e, key) {
         <div class="lesson-code-block">
             <div class="code-header">
                 <span>Contoh Kode</span>
-                <button onclick="copyCode(this)" class="copy-btn">Salin</button>
             </div>
             <pre><code>${lesson.code}</code></pre>
         </div>`;
@@ -191,25 +190,7 @@ function openLesson(e, key) {
     document.getElementById('lessonModal').classList.add('active');
 }
 
-function copyCode(btn) {
-    const code = btn.closest('.lesson-code-block').querySelector('code').innerText;
-    navigator.clipboard.writeText(code).then(() => {
-        btn.textContent = '✓ Disalin!';
-        setTimeout(() => btn.textContent = 'Salin', 2000);
-    });
-}
-
-/* ---------- Curriculum Accordion ---------- */
+// ---------- Curriculum Accordion ----------
 function toggleCurriculum(header) {
     header.parentElement.classList.toggle('open');
 }
-
-/* ---------- Modal Close ---------- */
-function closeModal() {
-    const modal = document.getElementById('lessonModal');
-    if (modal) modal.classList.remove('active');
-}
-
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
-});

@@ -1,6 +1,6 @@
-/* ==========================================
-   EVENT PAGE - Modal & Interaction Logic
-   ========================================== */
+// ==========================================
+// EVENT PAGE - Modal & Interaction Logic
+// ==========================================
 
 const eventData = {
     'webinar': {
@@ -72,11 +72,3 @@ function openEventDetail(e, key) {
     document.getElementById('eventModal').classList.add('active');
 }
 
-function closeModal() {
-    document.getElementById('eventModal').classList.remove('active');
-}
-
-// Close on Esc key
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
-});

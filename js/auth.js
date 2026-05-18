@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const registerForm = document.getElementById('registerForm');
-    
+
     const currentUser = localStorage.getItem('currentUser');
     const currentPath = window.location.pathname;
     const isAuthPage = currentPath.endsWith('login.html') || currentPath.endsWith('register.html');
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 username: username,
                 joinedAt: new Date().toISOString()
             };
-            
+
             localStorage.setItem('users', JSON.stringify(users));
             alert('Pendaftaran berhasil! Silakan login menggunakan username Anda.');
             window.location.href = 'login.html';
